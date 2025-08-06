@@ -22,16 +22,16 @@ class NumberButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.all(2),
           fixedSize: Size(80, 80),
-          backgroundColor: this.color,
+          backgroundColor: color,
           elevation: 2,
         ),
         onPressed: onclick,
         child: Text(
-          this.Number,
+          Number,
           style: TextStyle(
             color: Colors.black,
-            fontSize: this.fontSize,
-            fontWeight: this.fontweight,
+            fontSize: fontSize,
+            fontWeight: fontweight,
           ),
         ),
       ),

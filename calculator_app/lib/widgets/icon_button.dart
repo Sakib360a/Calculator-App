@@ -17,7 +17,7 @@ class Icon_Button extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.only(right: 2),
           fixedSize: Size(80, 80),
-          backgroundColor: this.color,
+          backgroundColor: color,
           elevation: 2,
         ),
         onPressed: onclick,

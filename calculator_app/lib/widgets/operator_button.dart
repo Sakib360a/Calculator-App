@@ -7,7 +7,7 @@ class OperatorButton extends StatelessWidget {
   final fontweight;
   final VoidCallback onclick;
 
-  OperatorButton({super.key, required this.Operator,required this.color,this.fontSize,this.fontweight, required this.onclick });
+  const OperatorButton({super.key, required this.Operator,required this.color,this.fontSize,this.fontweight, required this.onclick });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class OperatorButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.all(0),
           fixedSize: Size(80, 80),
-          backgroundColor: this.color,
+          backgroundColor: color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
@@ -25,11 +25,11 @@ class OperatorButton extends StatelessWidget {
         ),
         onPressed: onclick,
         child: Text(
-          this.Operator,
+          Operator,
           style: TextStyle(
             color: Colors.black,
-            fontSize: this.fontSize,
-            fontWeight: this.fontweight,
+            fontSize: fontSize,
+            fontWeight: fontweight,
           ),
         ),
       ),
