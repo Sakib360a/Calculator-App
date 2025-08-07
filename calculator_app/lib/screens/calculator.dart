@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../widgets/number_button.dart';
 import '../widgets/operator_button.dart';
 import '../widgets/icon_button.dart';
@@ -28,7 +27,7 @@ class _CalculatorState extends State<Calculator> {
   }
 
   /// Handles all button presses
-  void ButtonPress(String value) {
+  void buttonPress(String value) {
     setState(() {
       switch (value) {
         // Reset everything to default
@@ -247,40 +246,40 @@ class _CalculatorState extends State<Calculator> {
       children: [
         buildRow(
           [
-            () => ButtonPress('AC'),
-            () => ButtonPress('C'),
-            () => ButtonPress('%'),
-            () => ButtonPress('÷'),
+            () => buttonPress('AC'),
+            () => buttonPress('C'),
+            () => buttonPress('%'),
+            () => buttonPress('÷'),
           ],
           ['AC', 'C', '%', '÷'],
           [33, 35, 40, 52],
         ),
         buildRow(
           [
-            () => ButtonPress('1'),
-            () => ButtonPress('2'),
-            () => ButtonPress('3'),
-            () => ButtonPress('×'),
+            () => buttonPress('1'),
+            () => buttonPress('2'),
+            () => buttonPress('3'),
+            () => buttonPress('×'),
           ],
           ['1', '2', '3', '×'],
           [35, 35, 35, 52],
         ),
         buildRow(
           [
-            () => ButtonPress('4'),
-            () => ButtonPress('5'),
-            () => ButtonPress('6'),
-            () => ButtonPress('-'),
+            () => buttonPress('4'),
+            () => buttonPress('5'),
+            () => buttonPress('6'),
+            () => buttonPress('-'),
           ],
           ['4', '5', '6', '-'],
           [35, 35, 35, 50],
         ),
         buildRow(
           [
-            () => ButtonPress('7'),
-            () => ButtonPress('8'),
-            () => ButtonPress('9'),
-            () => ButtonPress('+'),
+            () => buttonPress('7'),
+            () => buttonPress('8'),
+            () => buttonPress('9'),
+            () => buttonPress('+'),
           ],
           ['7', '8', '9', '+'],
           [35, 35, 35, 50],
@@ -289,23 +288,23 @@ class _CalculatorState extends State<Calculator> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             NumberButton(
-              onclick: () => ButtonPress('.'),
+              onclick: () => buttonPress('.'),
               Number: '.',
               fontSize: 50,
               color: Color(0xFFe1effc),
             ),
             NumberButton(
-              onclick: () => ButtonPress('0'),
+              onclick: () => buttonPress('0'),
               Number: '0',
               fontSize: 35,
               color: Color(0xFFe1effc),
             ),
             Icon_Button(
-              onclick: () => ButtonPress('del'),
+              onclick: () => buttonPress('del'),
               color: Color(0xFFe1effc),
             ),
             OperatorButton(
-              onclick: () => ButtonPress('='),
+              onclick: () => buttonPress('='),
               Operator: '=',
               fontSize: 52,
               color: Color(0xFF7fb4ec),
